@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="970a85b8-03e5-4bf9-ae88-f0726bfe69af" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="tzmaven2Flow" doc:id="294568d5-15a1-4527-bfb6-fd55dac40211" >
+		<http:listener doc:name="Listener" doc:id="1707a7e3-f949-485f-ac35-78dfc81aad0c" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value="This was build from github action!" doc:name="Set Payload" doc:id="ad64de8e-4bb0-4c16-884b-cba961ab135e" />
+	</flow>
+</mule>
