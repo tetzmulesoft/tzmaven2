@@ -29,6 +29,24 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+
+				<configuration>
+		      <classifier>mule-application</classifier>
+		      <cloudHubDeployment>
+		        <muleVersion>4.3.0</muleVersion>
+		        <username>${env.PLATFORM_USERNAME}</username>
+		        <password>${env.PLATFORM_PASSWORD}</password>
+		        <applicationName>tzmaven2-20210908-tetzokabe</applicationName>
+		        <environment>KDDI</environment>
+		        <workers>1</workers>
+		        <workerType>MICRO</workerType>
+		        <objectStoreV2>true</objectStoreV2>
+		        <region>ap-northeast-1</region>
+		        <businessGroupId>${env.BUS_GROUP_ID}</businessGroupId>
+		      </cloudHubDeployment>
+		    </configuration>
+
+
 			</plugin>
 		</plugins>
 	</build>
