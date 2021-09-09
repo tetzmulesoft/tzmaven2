@@ -9,6 +9,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:listener-config>
 	<flow name="tzmaven2Flow" doc:id="294568d5-15a1-4527-bfb6-fd55dac40211" >
 		<http:listener doc:name="Listener" doc:id="1707a7e3-f949-485f-ac35-78dfc81aad0c" config-ref="HTTP_Listener_config" path="/test"/>
-		<set-payload value="This was build from github action! Real CI/CD!" doc:name="Set Payload" doc:id="ad64de8e-4bb0-4c16-884b-cba961ab135e" />
+		<set-payload value="This was build from github action! Real CI/CD! 2" doc:name="Set Payload" doc:id="ad64de8e-4bb0-4c16-884b-cba961ab135e" />
 	</flow>
 </mule>
